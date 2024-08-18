@@ -1,8 +1,8 @@
 # PRODIGY_CS_03
-# Password Strength Assessment
+# Password Strength Checker
 
-This Python script evaluates the strength of a password based on several criteria, such as length, presence of uppercase and lowercase letters, numbers, and special characters. The script provides a detailed assessment of the password, indicating whether it meets each of the criteria and assigning an overall strength rating.
-
+## Introduction
+The Password Strength Checker is a simple tool designed to evaluate the strength of passwords based on several common security criteria. The tool provides a detailed assessment of a password's strength, helping users create more secure passwords by highlighting areas of weakness.
 ## Features
 
 - **Length Requirement:** The password must be at least 8 characters long.
@@ -46,15 +46,28 @@ The script categorizes the password strength into four levels:
     Input the Password:
      The script will prompt you to enter a password to assess:
    ```bash
-      Enter a password to assess: Your_password
+   Enter a password to assess: Your_password
 4. **Review the Assessment:**
    
     The script will display a detailed assessment of the password, including whether it meets each criterion and the overall       strength rating:
-```bash
-    Password: Your_password
-    Length requirement met: Yes
-    Uppercase letter present: Yes
-    Lowercase letter present: Yes
-    Number present: Yes
-    Special character present: No
-    Password strength: Moderate
+   ```bash
+    -Password: Your_password
+    -Length requirement met: Yes
+    -Uppercase letter present: Yes
+    -Lowercase letter present: Yes
+    -Number present: Yes
+    -Special character present: No
+    -Password strength: Moderate
+
+## Code Explanation
+### assess_password_strength(password)
+This function takes a password as input and checks it against the following criteria:
+
+- **Length of the password**
+- **Presence of uppercase and lowercase letters**
+- **Inclusion of numbers and special characters**
+
+It returns a dictionary containing the results of these checks and the overall password strength.
+
+### display_password_strength(password_assessment)
+This function takes the output from `assess_password_strength` and prints a user-friendly summary of the password assessment.
